@@ -19,7 +19,8 @@ html {
 	border-radius: 10px;
 	display: grid;
 	grid-template: repeat(2, 1fr) / repeat(2, 1fr);
-	max-width: 750px;
+	max-width: 80%;
+	margin: 0 auto;
 }
 
 .card {
@@ -31,6 +32,7 @@ html {
 	background-color: white;
 	border-top-right-radius: 10px;
 	border-top-left-radius: 10px;
+	margin: 0;
 }
 
 .card__second {
@@ -50,8 +52,13 @@ html {
 	padding-bottom: 50px;
 }
 
+.card-container {
+	padding: 2em 0;
+}
+
 h1 {
 	color: hsl(179, 62%, 43%);
+	margin: 0;
 }
 
 .card__first h2 {
@@ -67,6 +74,10 @@ li {
 	list-style: none;
 }
 
+ul {
+	padding: 0;
+}
+
 .btn {
 	background-color: hsl(71, 73%, 54%);
 	border: none;
@@ -80,4 +91,33 @@ li {
 .btn:focus {
 	opacity: 0.9;
 	cursor: pointer;
+}
+
+@media (max-width: 600px) {
+	.container {
+		display: block;
+		max-width: 100%;
+		margin: 0;
+	}
+
+	.card__first {
+		padding: 3em 3em;
+		margin: 0;
+	}
+
+	h1 {
+		margin: 0;
+	}
+
+	ul {
+		padding: 0;
+	}
+
+	.card__second {
+		border-bottom-left-radius: 0;
+	}
+
+	.card__third {
+		border-bottom-right-radius: 0;
+	}
 }
